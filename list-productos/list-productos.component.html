@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row mt-3">
+
+        <div class="col-lg-6">
+            <h3>LISTADO DE PEDIDOS</h3>
+        </div>
+        <div class="col-lg-6">
+            <button class="btn btn-danger float-end" routerlink="/agregar">Nuevo Pedido</button>
+        </div>
+    </div>
+
+    <table class="table table-hover mt-3">
+        <thead>
+            <tr>
+                <td>REFERENCIA</td>
+                <td>MARCA</td>
+                <td>CANTIDAD</td>
+                <td>PRECIO</td>
+                <td>FECHA</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let Productos of listProductos">
+                <td>{{Productos.rederencia}}</td>
+                <td>{{Productos.marca}}</td>
+                <td>{{Productos.cantidad}}</td>
+                <td>{{Productos.precio}}</td>
+                <td>{{Productos.fechaCreacion}}</td>
+                <td style="width: 10%;"><button class="btn btn-danger btn-sm float-end" routerlink="/Editar/:id">Editar</button></td>
+                <td style="width: 10%;"><button class="btn btn-danger btn-sm float-end" routerlink="/Eliminar/:id">Eliminar</button></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div *ngIf="listProductos.length == 0" class="row mt-5">
+        <h5>No hay solicitudes de pedidos</h5>
+    </div>
+</div>

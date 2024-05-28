@@ -1,0 +1,18 @@
+.nav-color {
+    background-color: #00386d;
+}
+
+.dropdown-toggle,
+.dropown-item {
+    cursor: pointer;
+}
+
+img {
+    max-height: 50px;
+    border: 2px solid #fff;
+    display: inline;
+}
+
+.padding10 {
+    padding: 10px;
+}
